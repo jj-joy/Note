@@ -1,0 +1,3 @@
+--------  SED  --------
+sed '/test/i\insert a new line' -i file.txt
+sed '/test/a\add a new line' -i file.txt
