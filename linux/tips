@@ -12,19 +12,7 @@ grep -rl 'abc' /
 
 --------------------------------  ubuntu new user   --------------------------------
 添加用户并指定shell：
-#useradd -r -m -s  /bin/bash test    #test为新增用户
-#passwd test  #修改用户密码
-
-如果添加的时候未指定shelll可能没有创建用户目录和生成.bashrc文件。这时候就自己新建home目录和添加shell。
-#useradd test     #添加用户
-#passwd  test    #修改用户密码
-# mkdir /home/test  #创建用户目录
-#chown test:test  /home/test   #修改用户所属者
-这时候用户没有添加shell， echo $SHELL查看下。通过修改用户shell为/bin/bash
-#usermod -s /bin/bash  test
-如果没有/home/test/.bashrc文件，可以拷贝其他用户目录下的.bashrc文件。并修改所属者。
-# source ~/.bashrc   #使.bashrc文件立即生效
-
-然後設定系統使用者不需要輸入密碼即可使用 sudo 權限：
-$ echo "ubuntu ALL = (root) NOPASSWD:ALL" \
-| sudo tee /etc/sudoers.d/ubuntu && sudo chmod 440 /etc/sudoers.d/ubuntu
+useradd -r -m -s /bin/bash testuser
+passwd testuser
+設定系統使用者不需要輸入密碼即可使用 sudo 權限：
+echo "testuser ALL = (root) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/testuser && sudo chmod 440 /etc/sudoers.d/testuser
