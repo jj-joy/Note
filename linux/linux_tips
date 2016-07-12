@@ -1,0 +1,18 @@
+--------------------------------  sed  --------------------------------
+sed '/test/i\insert a new line' -i file.txt
+sed '/test/a\add a new line' -i file.txt
+
+
+--------------------------------  grep  --------------------------------
+grep -rl 'abc' /
+-r 选项表示递归(recursive)遍历所有子目录
+-l 选项表示只列出文件名
+/ 是根文件夹, 表示全盘
+
+
+--------------------------------  ubuntu new user   --------------------------------
+添加用户并指定shell:
+useradd -r -m -s /bin/bash testuser
+passwd testuser
+設定系統使用者不需要輸入密碼即可使用 sudo 權限:
+echo "testuser ALL = (root) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/testuser && sudo chmod 440 /etc/sudoers.d/testuser

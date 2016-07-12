@@ -1,0 +1,23 @@
+--------------------------------------------------------------------------------------------------------------------------------
+修复未提交文件中的错误(重置)
+如果你现在的工作目录(work tree)里搞的一团乱麻, 但是你现在还没有把它们提交; 你可以通过下面的命令, 让工作目录回到上次提交时的状态(last committed state):
+$ git reset --hard HEAD
+这条命令会把你工作目录中所有未提交的内容清空(当然这不包括未置于版控制下的文件 untracked files). 从另一种角度来说, 这会让"git diff" 和"git diff --cached"命令的显示法都变为空.
+如果你只是要恢复一个文件,如"hello.rb", 你就要使用 git checkout
+$ git checkout -- hello.rb
+这条命令把hello.rb从HEAD中签出并且把它恢复成未修改时的样子.
+
+--------------------------------------------------------------------------------------------------------------------------------
+Git: Delete a branch (local or remote)
+To delete a local branch
+
+git branch -d the_local_branch
+To remove a remote branch (if you know what you are doing!)
+
+git push origin :the_remote_branch
+Note
+If you get the error error: unable to push to unqualified destination: the_remote_branch The destination refspec neither matches an existing ref on the remote nor begins with refs/, and we are unable to guess a prefix based on the source ref. error: failed to push some refs to 'git@repository_name'
+perhaps someone else has already deleted the branch. Try to synchronize your branch list with
+
+git fetch -p 
+The git manual says -p, --prune After fetching, remove any remote-tracking branches which no longer exist on the remote.
