@@ -18,4 +18,4 @@ passwd testuser
 echo "testuser ALL = (root) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/testuser && sudo chmod 440 /etc/sudoers.d/testuser
 
 --------------------------------  disk  --------------------------------
-fallocate -l 10G 10Gigfile
+fallocate -l 30G 30Gigfile
