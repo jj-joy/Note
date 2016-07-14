@@ -20,4 +20,3 @@ echo "testuser ALL = (root) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/testuser && 
 
 --------------------------------  disk  --------------------------------
 fallocate -l 10G 10Gigfile
-df -h /export
