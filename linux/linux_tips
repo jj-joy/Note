@@ -10,9 +10,12 @@ grep -rl 'abc' /
 / 是根文件夹, 表示全盘
 
 
---------------------------------  ubuntu new user   --------------------------------
+--------------------------------  ubuntu new user  --------------------------------
 添加用户并指定shell:
 useradd -r -m -s /bin/bash testuser
 passwd testuser
 設定系統使用者不需要輸入密碼即可使用 sudo 權限:
 echo "testuser ALL = (root) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/testuser && sudo chmod 440 /etc/sudoers.d/testuser
+
+--------------------------------  disk  --------------------------------
+fallocate -l 10G 10Gigfile
