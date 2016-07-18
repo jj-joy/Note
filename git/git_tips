@@ -21,3 +21,6 @@ perhaps someone else has already deleted the branch. Try to synchronize your bra
 
 git fetch -p 
 The git manual says -p, --prune After fetching, remove any remote-tracking branches which no longer exist on the remote.
+
+--------------------------------------------------------------------------------------------------------------------------------
+强制上传的：git push --force [远程名] [本地分支名]:[远程分支名]
