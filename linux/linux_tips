@@ -39,3 +39,17 @@ tar -cf linux-3.12.tar linux-3.12/
 xz -z linux-3.12.tar
 方法二（推荐）
 tar -Jcf linux-3.12.tar.xz linux-3.12/
+
+
+--------------------------------  vim  --------------------------------
+在.vimrc文件中输入如下文本：
+set tabstop=4
+set softtabstop=4 
+set shiftwidth=4
+set nu
+# 不要用空格代替制表符
+set noexpandtab 
+# 继承前一行的缩进方式，特别适用于多行注释
+set autoindent
+# 使用C样式的缩进 
+set cindent
