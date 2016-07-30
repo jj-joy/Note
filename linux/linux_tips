@@ -53,3 +53,7 @@ set noexpandtab
 set autoindent
 # 使用C样式的缩进 
 set cindent
+
+
+--------------------------------  logrotate  --------------------------------
+logrotate /etc/logrotate.d/your-logrotate-config
