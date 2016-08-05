@@ -1,0 +1,2 @@
+--------------------------------  mysqlslap  --------------------------------
+mysqlslap --auto-generate-sql --auto-generate-sql-add-autoincrement --number-char-cols=10 --number-int-cols=10 --iterations=10 --concurrency=10 --engine=innodb --no-drop --debug-info --debug-check --host=10.12.140.152 --port=9696 --user=root --password=111111
